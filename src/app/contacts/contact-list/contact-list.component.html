@@ -1,0 +1,26 @@
+<div class="container-fluid">
+<div class="row bg-light align-items-center" style="background-color: #f5f5f5; padding: 10px;">
+    <div class="col-xs-12 d-flex align-items-center">
+        <h2 class="text-center pull-left">Contacts</h2>
+        <button class="btn btn-success pull-right text-center" style="display: inline-block;">New Contact</button>
+    </div>
+</div>
+</div>
+<div class="row">
+    <div class="col-xs-12">
+        <a href="" class="list-group-item clearfix" *ngFor="let contact of contact">
+            <div class="pull-left">
+                <h4 class="list-group-item-heading">{{contact.name}}</h4>
+                    <p class="list-group-item-text">{{contact.email}}</p>
+            </div>
+            <span class="pull-right">
+                <img 
+                [src]="contact.imageUrl"
+                alt="{{contact.name}}" 
+                class="img-responsive">
+            </span>
+        </a>
+    </div>
+</div>
+
+
